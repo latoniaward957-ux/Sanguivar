@@ -1,10 +1,41 @@
 print("Welcome to Sanguivar, Adventure Awaits! Please state your name to enter")
 
 name = input("What is your name?")
+choose_class = input("Choose your class: 1.Warrior, 2.Witch, 3.Healer")
+while choose_class not in ["1", "2", "3"]:
+    print("Invalid class choice! Try again.")
+    choose_class = input(" 1. Warrios, 2.Witch, 3. Healer")
+if choose_class == "1":
+    print("You have chosen the Warrior class!")
+    character_class = "Warrior"
+    health = 5
+    strength = 6
+    magic = 4
+    starting_item = "Sword"
 
-print(f"Hello {name}, enter at your own risk")
+elif choose_class == "2":
+    print("You have chosen the Witch class!")
+    character_class = "Witch"
+    health = 5
+    strength = 4
+    magic = 6
+    starting_item = "Wand"
+
+elif choose_class == "3":
+    print("You have chosen the Healer class!")
+    character_class = "Healer"
+    health = 5
+    strength = 5
+    magic = 5
+    starting_item = "Alchemy kit"
+
+
+print(f"Hello {name}, the {character_class}, your adventure begins now!")
+print(f"Your starting item is: {starting_item}")
+print(f"Your starting stats are: Health: {health}, Strength: {strength}, Magic: {magic}")
 #Player wakes up in dark dusty cell
 inventory = []
+inventory.append(starting_item)
 door_open = False
 print("You wake up in a dark dusty cell")
 while door_open == False:
