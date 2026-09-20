@@ -17,7 +17,7 @@ The project begins as a simple text adventure and will grow over time as i learn
 
 ## ⚔️ Character Classes
 
-###Warrior
+### Warrior
 -Health: 5
 -Strength: 6
 -Magic: 4
