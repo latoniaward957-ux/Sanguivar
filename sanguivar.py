@@ -1,10 +1,16 @@
-print("Welcome to Sanguivar, Adventure Awaits! Please state your name to enter")
+print("Welcome to Sanguivar, Adventure Awaits!")
 
-name = input("What is your name?")
-choose_class = input("Choose your class: 1.Warrior, 2.Witch, 3.Healer")
+name = input("Traveller, state your name to enter: ")
+print("Welcome,", name +".")
+print("Choose your class:")
+print("1. Warrior")
+print("2. Witch")
+print("3. Healer")
+choose_class = input("Enter your choice")
+
 while choose_class not in ["1", "2", "3"]:
     print("Invalid class choice! Try again.")
-    choose_class = input(" 1. Warrios, 2.Witch, 3. Healer")
+    choose_class = input("Choose your class: 1. Warrior, 2. Witch, 3. Healer")
 if choose_class == "1":
     print("You have chosen the Warrior class!")
     character_class = "Warrior"
@@ -31,13 +37,14 @@ elif choose_class == "3":
 
 
 print(f"Hello {name}, the {character_class}, your adventure begins now!")
-print(f"Your starting item is: {starting_item}")
+print(f"Your class item is: {starting_item}")
 print(f"Your starting stats are: Health: {health}, Strength: {strength}, Magic: {magic}")
 #Player wakes up in dark dusty cell
 inventory = []
-inventory.append(starting_item)
 door_open = False
 print("You wake up in a dark dusty cell")
+print(f"You reach for your {starting_item.lower()}, but it's gone.")
+print("Your belongings have been taken.")
 while door_open == False:
     print("1. Search the cell")
     print("2. Try the cell door")
@@ -59,7 +66,7 @@ while door_open == False:
 
 print("You step outside into the dimly lit corridor")
 print("1. Go left")
-print("2.Go right")
+print("2. Go right")
 action = input("What do you do?")
 if action == "1":   
         print("You walk down the corridor and find a torch on the wall") 
@@ -80,6 +87,6 @@ elif action == "2":
     if action == "1":
         print("The door is locked, you need to find a key or another way to open it")
     elif action == "2":
-        print("You continue down the corrdior and stop at the edge of a steep dark staircase leading into darkness")
+        print("You continue down the corridor and stop at the edge of a steep dark staircase leading into darkness")
     
 
